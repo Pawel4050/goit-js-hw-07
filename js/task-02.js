@@ -24,3 +24,31 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+// const images = [
+//   {
+//     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
+//     alt: "White and Black Long Fur Cat",
+//   },
+//   {
+//     url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
+//     alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+//   },
+//   {
+//     url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
+//     alt: "Group of Horses Running",
+//   },
+// ];
+
+// Wybieramy listę galerii na podstawie jej klasy
+const galleryList = document.querySelector('.gallery');
+
+// Tworzymy elementy galerii z tablicy images
+const galleryItems = images.map(image => 
+  `<li class="gallery-item">
+     <img src="${image.url}" alt="${image.alt}" class="gallery-image" />
+   </li>`
+).join('');
+
+// Dodajemy wszystkie elementy do DOM w jednej operacji
+galleryList.insertAdjacentHTML('beforeend', galleryItems);
