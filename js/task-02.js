@@ -25,4 +25,4 @@
       )
       .join("");
     gallery.insertAdjacentHTML("beforeend", galleryMarkup);
-    console.log(gallery);
+    // console.log(gallery);
